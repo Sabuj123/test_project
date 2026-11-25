@@ -1,5 +1,5 @@
 // Backend API address
-const API_URL = "http://127.0.0.1:8000/students";
+const API_URL = "https://test-project-1-npuy.onrender.com/students";
 
 // null = adding a new student, a number = editing that roll
 let editingRoll = null;
