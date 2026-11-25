@@ -28,7 +28,7 @@ SERVER_URL = "postgresql+psycopg2://demo_wp8b_user:5oMxnDteLNbrZSksErTohY1WWBTsJ
 # # Full address of our database
 # DATABASE_URL = f"{SERVER_URL}/{DB_NAME}"
 
-engine = create_engine(SERVER_URL)
+engine = create_engine(SERVER_URL,pool_pre_ping=True,pool_recycle=300,)
 session_local = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 base = declarative_base()
 
